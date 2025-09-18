@@ -1,0 +1,23 @@
+Designator,Qty,Description,Suggested Part,Notes,Option
+PS1,1,AC/DC PSU 85-264Vac -> 12V 30W,Mean Well HDR-30-12 or IRM-30-12,DIN or PCB,Common
+U1,1,ESP32 module ESP32-WROOM-32E,ESP32-WROOM-32E,Controller,Common
+U2,1,3.3V DC/DC from 12V,RECOM R-78E3.3 or MP1584 module,3.3V for ESP32,Common
+OPTO1,1,Optocoupler for coil drive,PC817 or LTV-817,Isolation for coil,Common
+Q1,1,Logic-level MOSFET for coil,IRLZ44N or AOZ1282 equivalent,With flyback diode,Common
+K1,1,Contactor 2P >= 40A coil 12/24V,Schneider/ABB/Chint 40A AC-1,Select coil voltage,Common
+CAB_T2,1,Type 2 fixed cable 32A,32A rated cable with PP resistor,PP=220Ω in handle,Common
+SENS_T,2,Temp sensor,DS18B20 (TO-92 or cable),Cable and box temp,Common
+WIFI_ANT,1,External Wi-Fi antenna,u.FL whip (optional),For metal enclosures,Common
+RCD,1,Residual Current Device,Type A-EV (30mA + 6mA DC) or Type B,Upstream protection,Common
+U_CP,1,Control Pilot module,EVSE CP module (commercial),"PWM in, A/B/C/D outputs",Option A
+ISO1,1,Digital isolator 2-ch,TI ISO7721,"PWM to CP module, status back",Option A
+DC1,1,Isolated DC/DC 12V->±12V,TRACO TMR 1-1222,Generates ±12V for CP,Option B
+ISO2,1,Digital isolator 1-ch,TI ISO7721 or ADuM1251,PWM isolation,Option B
+U_DRV,1,Analog switch/H-bridge for CP,MAX14757 or discrete MOSFET pair,Switch CP to ±12V,Option B
+R1,1,Series resistor CP 1k,1k 1% 0.25W,IEC 61851 CP line,Option B
+R2,1,Bleed resistor CP 1M,1M 1% 0.25W,Stability/EMC,Option B
+C1,1,Filter CP 1nF,NP0/C0G 50V,EMC shaping,Option B
+ISO_SENSE,1,Isolated amplifier for CP sense,TI ISO224 or Si8920,To ESP32 ADC,Option B
+J1,1,Connector CP/PP/PE to cable,3-pin terminal,To cable harness,Option B
+J_RCD,1,Fault input from RCD,2-pin terminal,Isolated input,Common
+LEDs,3,Status LEDs (PWR/CHG/FLT),5mm LEDs + resistors,Front panel,Common
